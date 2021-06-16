@@ -1,3 +1,5 @@
+import PropTypes from "prop-types"
+
 const Filter = ({ onInput }) => (
   <>
     <h2>Find contacts by name</h2>
@@ -10,5 +12,9 @@ const Filter = ({ onInput }) => (
       onChange={onInput}
     />
   </>
-);
-export default Filter;
+)
+
+Filter.propTypes = {
+  onInput: PropTypes.func.isRequired,
+}
+export default Filter

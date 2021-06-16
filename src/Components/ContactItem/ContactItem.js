@@ -1,4 +1,5 @@
-import "./ContactItem.css";
+import PropTypes from "prop-types"
+import "./ContactItem.css"
 
 const ContactItem = ({ contacts, onDelete }) =>
   contacts.map((contact) => (
@@ -14,6 +15,10 @@ const ContactItem = ({ contacts, onDelete }) =>
         Delete
       </button>
     </li>
-  ));
+  ))
 
-export default ContactItem;
+ContactItem.propTypes = {
+  contacts: PropTypes.array.isRequired,
+  onDelete: PropTypes.func.isRequired,
+}
+export default ContactItem
